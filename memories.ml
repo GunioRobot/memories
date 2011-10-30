@@ -2,7 +2,7 @@ type t = {
   s : string;
   m : int; (* number of bits in the array, i.e. 8 * String.length s *)
 
-  max_bits_set : int; 
+  max_bits_set : int;
   mutable bits_set : int;
   mutable pos : int;
 }
@@ -42,7 +42,7 @@ let rec clear x =
 let put x a =
   for pos = 0 to Array.length a - 1 do
     let i = a.(pos) mod x.m in
-    if set_bit x.s i then 
+    if set_bit x.s i then
       if x.bits_set >= x.max_bits_set then
         clear x
       else
@@ -67,7 +67,7 @@ let create ~max_bits_set m =
     s = String.make len '\000';
     m = m;
 
-    max_bits_set = max_bits_set; 
+    max_bits_set = max_bits_set;
     bits_set = 0;
     pos = 0;
   }

@@ -2,7 +2,7 @@ type t = {
   s : string;
   m : int; (* number of bits in the array, i.e. 8 * String.length s *)
 
-  max_bits_set : int; 
+  max_bits_set : int;
   mutable bits_set : int;
   mutable sweep_pos : int;
 }

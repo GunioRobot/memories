@@ -12,7 +12,7 @@ val create : int -> t
       bits being set (to 1) at any given time. *)
 
 val put : t -> int array -> int -> int
-  (** [put x n a] takes an element hashed into [k] indices given 
+  (** [put x n a] takes an element hashed into [k] indices given
       as a sorted array [a] and flips [n] of these bits to 1 in the IFBF [x],
       or as many as possible.
       The return value is the number of consecutive bits that were set
